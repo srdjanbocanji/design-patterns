@@ -1,5 +1,6 @@
 package org.tasmanijskidjavo.builder;
 
+import org.tasmanijskidjavo.builder.util.HeaderRequestBuilderComponent;
 import org.tasmanijskidjavo.builder.util.HttpMethod;
 
 public class RequestBuilder<T> {
@@ -10,8 +11,8 @@ public class RequestBuilder<T> {
 
     private HttpHeaders headers;
 
-    public HeadersBuilder headers() {
-        return new HeadersBuilder(this);
+    public HeaderRequestBuilderComponent headers() {
+        return new HeaderRequestBuilderComponent(this);
     }
 
     public RequestBuilder headers(HeadersBuilder headersBuilder) {

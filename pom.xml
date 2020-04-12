@@ -8,6 +8,8 @@
     <version>0.0.1</version>
     <modules>
         <module>builder</module>
+        <module>strategy</module>
+        <module>specification</module>
     </modules>
     <name>Java Design Patterns</name>
     <description>Implementation of Design Patterns in Java</description>

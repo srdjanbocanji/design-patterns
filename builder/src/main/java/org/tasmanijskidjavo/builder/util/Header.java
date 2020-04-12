@@ -1,5 +1,10 @@
 package org.tasmanijskidjavo.builder.util;
 
+/**
+ * Contains header key paired with its value.
+ *
+ * @author sbocanji
+ */
 public class Header {
 
     private final String key;

@@ -1,53 +1,39 @@
 package org.tasmanijskidjavo.builder;
 
-public class HeadersBuilder implements RequestBuilderComponent {
+@SuppressWarnings("unchecked")
+public class HeadersBuilder<SELF extends HeadersBuilder<SELF>> {
 
     private HttpHeaders headers = new HttpHeaders();
 
-    private RequestBuilder requestBuilder;
-
-    public HeadersBuilder() {
-
-    }
-
-    public HeadersBuilder(RequestBuilder requestBuilder) {
-        this.requestBuilder = requestBuilder;
-    }
-
-    public HeadersBuilder contentType(String contentType) {
+    public SELF contentType(String contentType) {
         headers.addHeader("Content-Type", contentType);
-        return this;
+        return (SELF) this;
     }
 
-    public HeadersBuilder accept(String accept) {
+    public SELF accept(String accept) {
         headers.addHeader("Accept", accept);
-        return this;
+        return (SELF) this;
+
     }
 
-    public HeadersBuilder cookie(String cookies) {
+    public SELF cookie(String cookies) {
         this.headers.addHeader("Cookie", cookies);
-        return this;
+        return (SELF) this;
+
     }
 
-    public HeadersBuilder userAgent(String userAgent) {
+    public SELF userAgent(String userAgent) {
         this.headers.addHeader("User-Agent", userAgent);
-        return this;
+        return (SELF) this;
     }
 
-    public HeadersBuilder header(String key, String value) {
+    public SELF header(String key, String value) {
         this.headers.addHeader(key, value);
-        return this;
+        return (SELF) this;
     }
 
     public HttpHeaders build() {
         return headers;
-    }
-
-    public RequestBuilder and() {
-        if(requestBuilder == null) {
-            throw new IllegalArgumentException();
-        }
-        return requestBuilder.headers(this);
     }
 
 }
