@@ -10,6 +10,7 @@
         <module>builder</module>
         <module>strategy</module>
         <module>specification</module>
+        <module>decorator</module>
     </modules>
     <name>Java Design Patterns</name>
     <description>Implementation of Design Patterns in Java</description>
