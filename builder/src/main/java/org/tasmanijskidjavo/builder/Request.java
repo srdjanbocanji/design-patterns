@@ -1,5 +1,7 @@
 package org.tasmanijskidjavo.builder;
 
+import org.tasmanijskidjavo.builder.util.HttpMethod;
+
 public class Request<T> {
 
     private final HttpMethod method;

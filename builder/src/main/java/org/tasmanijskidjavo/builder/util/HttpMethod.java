@@ -1,4 +1,4 @@
-package org.tasmanijskidjavo.builder;
+package org.tasmanijskidjavo.builder.util;
 
 /**
  * Http request methods.

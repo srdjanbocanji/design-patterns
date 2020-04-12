@@ -1,6 +1,6 @@
 package org.tasmanijskidjavo.builder;
 
-public class HeadersBuilder {
+public class HeadersBuilder implements RequestBuilderComponent {
 
     private HttpHeaders headers = new HttpHeaders();
 
